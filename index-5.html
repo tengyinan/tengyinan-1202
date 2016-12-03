@@ -59,12 +59,8 @@
                     <tr ng-repeat="obj in info | orderBy:sortColumn:reverseSort">
                         <td>{{obj.name | uppercase}}</td>
                         <td>{{obj.email | lowercase}}</td>
-                         
                         <td>{{obj.Salary | currency:"￥"}}</td>
-                         
-                         
                         <td>{{obj.birthday | date:"yyyy-MM-dd"}}</td>
-                       
                     </tr>
                 </tbody>
             </table>

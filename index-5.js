@@ -4,34 +4,26 @@ var myController = function($rootScope,$scope){
     var info = [
        {
           name:"fang",
-          email:"marry@sohu.com",
-          hotCount:0,
-          Salary:18950,
-          friends:["lili","angular","rect"],
+          email:"marry@sohu.com", 
+          Salary:18950, 
           birthday:new Date("1998-8-30")
        },
        {
           name:"sara",
           email:"amyKitty@sohu.com",
-          hotCount:0,
           Salary:15023,
-          friends:["lili","angular","rect"],
           birthday:new Date("2000-10-12")
        },
        {
           name:"Jack",
           email:"amJack@sohu.com",
-          hotCount:0,
           Salary:20000,
-          friends:["lili","angular","rect"],
           birthday:new Date("1996-5-12")
        },
        {
           name:"Amy",
           email:"markLili@sohu.com",
-          hotCount:0,
           Salary:13000,
-          friends:["lili","angular","rect"],
           birthday:new Date("2000-10-12")
        }
     ]
