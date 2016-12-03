@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+        <style>
+           td{
+                text-align:center;
+                padding:8px 12px;
+           }
+           .allow-down{
+               display:inline-block;
+               width:0;
+               height:0;
+               overflow:hidden;
+               border-left:5px solid transparent;
+               border-right:5px solid transparent;
+               border-top:10px solid #000;
+           }
+           .allow-up{
+               display:inline-block;
+               width:0;
+               height:0;
+               overflow:hidden;
+               border-left:5px solid transparent;
+               border-right:5px solid transparent;
+               border-bottom:10px solid #000;
+           }
+        </style>
+</head>
+<body ng-app="myApp">
+   <div ng-controller="myController">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td ng-click="setSortColumn('name')">
+                           Name
+                           <span ng-class="getSortClass('name')"></span>
+                        </td>
+                        <td ng-click="setSortColumn('email')">
+                            Email
+                            <span ng-class="getSortClass('email')"></span>
+                        </td>
+                        <td ng-click="setSortColumn('sex')">
+                            Sex
+                            <span ng-class="getSortClass('sex')"></span>
+                        </td>
+                        <td ng-click="setSortColumn('Salary')">
+                            Salary
+                            <span ng-class="getSortClass('Salary')"></span>
+                        </td>
+                        <td ng-click="setSortColumn('hotCount')">
+                            HotCount
+                            <span ng-class="getSortClass('hotCount')"></span>
+                        </td>
+                        <td>
+                            Firends
+                            <span></span>
+                        </td>
+                        <td ng-click="setSortColumn('birthday')">
+                            Birthday
+                            <span ng-class="getSortClass('birthday')"></span>
+                        </td>
+                        <td>Option</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in info | orderBy:sortColumn:reverseSort">
+                        <td>{{obj.name | uppercase}}</td>
+                        <td>{{obj.email | lowercase}}</td>
+                        <td>{{obj.sex}}</td>
+                        <td>{{obj.Salary | currency:"￥"}}</td>
+                        <td>{{obj.hotCount}}</td>
+                        <td>
+                           <!--  <ul>
+                               <li ng-repeat="f in obj.friends">
+                                  <span>{{f}}</span>
+                               </li>
+                           </ul> -->
+                        </td>
+                        <td>{{obj.birthday | date:"yyyy-MM-dd"}}</td>
+                        <td>
+                            <button ng-click="addHotCount(obj)">HotCount+</button>
+                            <button ng-click="subHotCount(obj)">HotCount-</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+   </div>
+   <script src="angular.min.js"></script>
+   <script src="index-5.js"></script>
+</body>
+</html>
