@@ -3,20 +3,18 @@ var myApp = angular.module("myApp",[]); // 定义模块的语法
 var myController = function($rootScope,$scope){
     var info = [
        {
-          name:"marry",
+          name:"fang",
           email:"marry@sohu.com",
           hotCount:0,
           Salary:18950,
-          sex:1,
           friends:["lili","angular","rect"],
           birthday:new Date("1998-8-30")
        },
        {
-          name:"kitty",
+          name:"sara",
           email:"amyKitty@sohu.com",
           hotCount:0,
           Salary:15023,
-          sex:1,
           friends:["lili","angular","rect"],
           birthday:new Date("2000-10-12")
        },
@@ -25,7 +23,6 @@ var myController = function($rootScope,$scope){
           email:"amJack@sohu.com",
           hotCount:0,
           Salary:20000,
-          sex:0,
           friends:["lili","angular","rect"],
           birthday:new Date("1996-5-12")
        },
@@ -34,7 +31,6 @@ var myController = function($rootScope,$scope){
           email:"markLili@sohu.com",
           hotCount:0,
           Salary:13000,
-          sex:1,
           friends:["lili","angular","rect"],
           birthday:new Date("2000-10-12")
        }
